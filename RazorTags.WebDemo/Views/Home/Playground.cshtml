@@ -1,0 +1,126 @@
+﻿@model PlaygroundVM
+@{
+	var ttt = this.GetType();
+	ViewData["Title"] = "Razor tags playground";
+	ViewData["Subtitle"] = "Fun 1";
+	string msg = ViewData["Message"] as string;
+	//RBVKv label1 = new RBVKv("hey1", "hey2");
+	bool noLabel = false;
+	this.Output.Print();
+	var pageInfo =
+		new PageInfo(totalItemCount: 3723, itemsPerPage: 25, currentPage: Model.Page, maxDisplayPages: 13, showFirstLastPages: true);
+}
+
+<alert header="<u>Hmmm</u>mmm<i>rrr</i>" header-as-html="true" message="@msg" kind="Success"></alert>
+@*Hi, <i>YOU</i> <b>need</b> to <span style="color:darkred; background-color:blue; font-size:40px;">READ</span> this!!!*@
+
+<h4>Shalom in the Home!</h4>
+
+@(new PaginatorTag() { PageInfo = pageInfo, ShowGap = true, Gap = "..88..", PageToHref = page => $"/Home/Playground?page={page}" })
+
+@*@(new PaginatorTag() { PageInfo = pageInfo, PageToHref = page => $"/Home/Playground?page={page}" })*@
+
+<p>
+	Hi, this is an archive!:
+	@*@(new TooltipIcon("Hey what's up!", isPopover: true))*@
+	<tooltip-icon tooltip="Hey what's up2!" icon="@FA.LightbulbO" />
+	@*<i class="@FA.Archive"></i>*@
+	<br />
+	This is a diamond: <i class="@FA.AudioDescription" style="color:green"></i>. Cool eh?!
+</p>
+
+<p>
+	Hi, my name is Amigo. Here's a link:
+	<a kind="Success"
+	   asp-action="Contact" asp-route-name1="nick" asp-route-age="39"
+	   outline="true"
+	   size="Large"
+	   tooltip="Yeller"
+	   data-hey="55" class="shalom ">
+		Thi<b>s is ve</b>ry <span style="color:red; background-color: #b6ff00">COOL man!</span>
+		<icon color="Warning" icon="@FA.ArrowCircleRight" tag-name="span" />
+	</a>
+
+	@*href="@Url.Action("Contact", new { id = 33 })" *@
+
+	<button class="dodaday"
+			kind="Primary"
+			outline="true"
+			size="Large"
+			tooltip="This is <b>reallly</b> cool"
+			ttip-is-html="true"
+			pup-title="Ok cool"
+			pup-focus="true"
+			onclick="alert('Hey!')">
+		Hey!
+	</button>
+
+</p>
+<p>I have a light, and it always shines...</p>
+
+<form method="post" asp-action="Playground" class="no-group-labels1">
+
+	@Html.ValidationSummary()
+	<div class="form-row no-group-labels1">
+		@{
+			var label1 = Html.c(@<span>Is <i>this</i> really <u>truly</u> <b><i style="color:green">HTML?!</i></b></span>);
+		}
+
+		<textbox for="Name"
+				 no-label="false"
+				 pre-label-tooltip-icon="Cool! <b>Thank</b> you for loving us."
+				 post-label-html="@(new TooltipIconTag("Cool <u>bean's</u> man") { IsHtml = true })"
+				 placeholder="Shal'om"
+				 group-css="col"
+				 size="Large" />
+
+		<password for="PWord"
+				  no-label="false"
+				  label="Your Password"
+				  post-label-tooltip-icon="This is a cool <i>pswd</i>!"
+				  group-css="col-4" />
+	</div>
+	<textbox for="Email" />
+
+	<div class="form-row">
+		<dropdown for="RunToStore" group-css="col" post-label-tooltip-icon="NO second changes!" />
+		<radiobuttons for="Color" group-css="col-6" post-label-tooltip-icon="YES!" inline="false" />
+		<checkbox for="IsCool" group-css="col" label="Hey, are you cool??!!" group-label="" />
+		<textbox for="Age" group-css="col-2" post-label-tooltip-icon="howdy!" />
+	</div>
+
+	<textarea-grp for="Description" rows="7"></textarea-grp>
+
+	<div class="form-row">
+		<textbox for="PublishedTime" group-css="col-7" />
+		<textbox for="Title" group-css="col" />
+	</div>
+
+	<p>
+		<div popup="Blessed be the God and Father of our Lord <b>Jesus Christ</b>"
+			 ttip-is-html="true"
+			 ttip-placement="Left"
+			 pup-title="Listen to this"
+			 style="display:block; width: 100px; height: 100px; background-color:aquamarine;">
+			Hey, I'm a cool tag.
+		</div>
+	</p>
+
+	<paginator page-info="@pageInfo"
+			   page-to-href="@(page => $"/Home/Playground?page={page}")"
+			   jump-links="true"
+			   show-gap="true"
+			   size="Small"
+			   always-show-prev-next="true" />
+
+	<submit-button></submit-button>
+
+	<button type="submit" size="Large">Submit!</button>
+</form>
+
+<!--
+	φως του κοσμου
+	tooltip="Cool <b>beans</b> <u>man</u>!"
+	ttip-as-popover="true"
+	ttip-is-html="true"
+	ttip-placement="Right"-->

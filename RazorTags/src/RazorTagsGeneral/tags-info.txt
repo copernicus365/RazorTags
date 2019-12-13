@@ -1,0 +1,21 @@
+﻿
+ASP CORE SOURCE:
+
+TagHelper.cs: https://github.com/aspnet/Razor/blob/758be9ae133bcff12e456e5bf700524f27035503/src/Microsoft.AspNetCore.Razor.Runtime/TagHelpers/TagHelper.cs
+
+TagHelperOutput.cs: https://github.com/aspnet/Razor/blob/dev/src/Microsoft.AspNetCore.Razor.Runtime/TagHelpers/TagHelperOutput.cs
+
+TagHelperContext.cs: https://github.com/aspnet/Razor/blob/dev/src/Microsoft.AspNetCore.Razor.Runtime/TagHelpers/TagHelperContext.cs
+
+TagHelperAttribute.cs: https://github.com/aspnet/Razor/blob/dev/src/Microsoft.AspNetCore.Razor.Runtime/TagHelpers/TagHelperAttribute.cs
+
+TagHelperAttributeList.cs: https://github.com/aspnet/Razor/blob/dev/src/Microsoft.AspNetCore.Razor.Runtime/TagHelpers/TagHelperAttributeList.cs
+
+AnchorTagHelper.cs: https://github.com/aspnet/Mvc/blob/dev/src/Microsoft.AspNetCore.Mvc.TagHelpers/AnchorTagHelper.cs
+
+
+
+
+
+
+

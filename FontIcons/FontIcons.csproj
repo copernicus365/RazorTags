@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="src\generated\removed\**" />
+    <EmbeddedResource Remove="src\generated\removed\**" />
+    <None Remove="src\generated\removed\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetXtensions" Version="3.6.0" />
+  </ItemGroup>
+
+</Project>
