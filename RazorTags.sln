@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorTags", "RazorTags\Razo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FontIcons", "FontIcons\FontIcons.csproj", "{F0F0841C-29CA-4BFA-ABEC-BF2CFC5A107B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorTags.WebDemo", "RazorTags.WebDemo\RazorTags.WebDemo.csproj", "{245A600D-B12C-482B-B073-FEF8E2A66820}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorTags.WebDemo", "RazorTags.WebDemo\RazorTags.WebDemo.csproj", "{245A600D-B12C-482B-B073-FEF8E2A66820}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

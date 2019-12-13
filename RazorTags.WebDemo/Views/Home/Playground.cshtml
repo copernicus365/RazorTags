@@ -7,24 +7,31 @@
 	//RBVKv label1 = new RBVKv("hey1", "hey2");
 	bool noLabel = false;
 	this.Output.Print();
-	var pageInfo =
-		new PageInfo(totalItemCount: 3723, itemsPerPage: 25, currentPage: Model.Page, maxDisplayPages: 13, showFirstLastPages: true);
+
+	var pageInfo = new PageInfo(
+		totalItemCount: 3723,
+		itemsPerPage: 25,
+		currentPage: Model.Page,
+		maxDisplayPages: 13,
+		showFirstLastPages: true);
 }
 
-<alert header="<u>Hmmm</u>mmm<i>rrr</i>" header-as-html="true" message="@msg" kind="Success"></alert>
-@*Hi, <i>YOU</i> <b>need</b> to <span style="color:darkred; background-color:blue; font-size:40px;">READ</span> this!!!*@
+<alert
+	   header="<u>Hmmm</u>mmm<i>rrr</i>"
+	   header-as-html="true"
+	   message="@msg"
+	   kind="Success"></alert>
 
 <h4>Shalom in the Home!</h4>
 
-@(new PaginatorTag() { PageInfo = pageInfo, ShowGap = true, Gap = "..88..", PageToHref = page => $"/Home/Playground?page={page}" })
-
-@*@(new PaginatorTag() { PageInfo = pageInfo, PageToHref = page => $"/Home/Playground?page={page}" })*@
+<paginator page-info="pageInfo",
+		   show-gap="true"
+		   gap="..."
+		   page-to-href='page => $"/Home/Playground?page={page}"' />
 
 <p>
 	Hi, this is an archive!:
-	@*@(new TooltipIcon("Hey what's up!", isPopover: true))*@
 	<tooltip-icon tooltip="Hey what's up2!" icon="@FA.LightbulbO" />
-	@*<i class="@FA.Archive"></i>*@
 	<br />
 	This is a diamond: <i class="@FA.AudioDescription" style="color:green"></i>. Cool eh?!
 </p>
@@ -84,7 +91,9 @@
 
 	<div class="form-row">
 		<dropdown for="RunToStore" group-css="col" post-label-tooltip-icon="NO second changes!" />
-		<radiobuttons for="Color" group-css="col-6" post-label-tooltip-icon="YES!" inline="false" />
+
+		<radiobuttons for="Color" group-css="col-6" inline="false" />
+
 		<checkbox for="IsCool" group-css="col" label="Hey, are you cool??!!" group-label="" />
 		<textbox for="Age" group-css="col-2" post-label-tooltip-icon="howdy!" />
 	</div>
