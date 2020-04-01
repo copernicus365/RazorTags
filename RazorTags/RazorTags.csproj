@@ -11,7 +11,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>razor,aspnet,razor-tags</PackageTags>
     <PackageReleaseNotes />
-    <Description>A library of Razor tag helpers for ASP.NET Core, styled after Bootstrap 4. Inspiration and lead is from the Bootstrap.MVC library (https://github.com/copernicus365/Bootstrap.MVC). This can be seen, and directly took a bulk of code from, that library, while of course majorly changing to match the new ASP.NET Core razor tag helpers way.</Description>
+    <Description>A library of Razor tag helpers for ASP.NET Core, styled upon Bootstrap 4. This library is a refoundation of the [Bootstrap.MVC library](https://github.com/copernicus365/Bootstrap.MVC) on top of ASP.NET Core (instead of ASP.NET MVC 5), with its new and beautiful razor HTML tags, and on top of Bootstrap 4 (instead of Bootstrap 2.3).</Description>
     <!--<NoWarn>1701;1702;1705;0159;1591;NU5105;</NoWarn>-->
   </PropertyGroup>
 
