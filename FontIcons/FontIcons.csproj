@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetXtensions" Version="3.6.0" />
+    <PackageReference Include="DotNetXtensions" Version="3.7.0" />
   </ItemGroup>
 
 </Project>

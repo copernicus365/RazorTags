@@ -6,7 +6,7 @@
 	string msg = ViewData["Message"] as string;
 	//RBVKv label1 = new RBVKv("hey1", "hey2");
 	bool noLabel = false;
-	this.Output.Print();
+	this.Output.Print(); // <-- what the heck was this? pry some diagnostics thing
 
 	var pageInfo = new PageInfo(
 		totalItemCount: 3723,
@@ -22,15 +22,19 @@
 	   message="@msg"
 	   kind="Success"></alert>
 
-<h4>Shalom in the Home!</h4>
+<h4>Razor Tags Playground!</h4>
 
 <paginator page-info="pageInfo",
 		   show-gap="true"
-		   gap="..."
+		   gap="...josh..."
 		   page-to-href='page => $"/Home/Playground?page={page}"' />
 
 <p>
-	Hi, this is an archive!:
+	Note: below is a rather hideous conglomeration of controls,
+	goal was to test out a ton of razor-tags all on this one page.
+	So it's ugly! But the point was to see on one page as many features
+	working as possible... Let's start with how to insert a tooltip icon:
+
 	<tooltip-icon tooltip="Hey what's up2!" icon="@FA.LightbulbO" />
 	<br />
 	This is a diamond: <i class="@FA.AudioDescription" style="color:green"></i>. Cool eh?!
@@ -75,11 +79,8 @@
 
 		<textbox for="Name"
 				 no-label="false"
-				 pre-label-tooltip-icon="Cool! <b>Thank</b> you for loving us."
-				 post-label-html="@(new TooltipIconTag("Cool <u>bean's</u> man") { IsHtml = true })"
-				 placeholder="Shal'om"
 				 group-css="col"
-				 size="Large" />
+				 size="Normal" />
 
 		<password for="PWord"
 				  no-label="false"
@@ -90,11 +91,11 @@
 	<textbox for="Email" />
 
 	<div class="form-row">
-		<dropdown for="RunToStore" group-css="col" post-label-tooltip-icon="NO second changes!" />
+		<dropdown for="RunToStore" group-css="col" post-label-tooltip-icon="Lorem ipsum!" />
 
 		<radiobuttons for="Color" group-css="col-6" inline="false" />
 
-		<checkbox for="IsCool" group-css="col" label="Hey, are you cool??!!" group-label="" />
+		<checkbox for="IsCool" group-css="col" label="You cool?!" group-label="" />
 		<textbox for="Age" group-css="col-2" post-label-tooltip-icon="howdy!" />
 	</div>
 
@@ -106,7 +107,7 @@
 	</div>
 
 	<p>
-		<div popup="Blessed be the God and Father of our Lord <b>Jesus Christ</b>"
+		<div popup="Lorem ipsum <b>hello</b>"
 			 ttip-is-html="true"
 			 ttip-placement="Left"
 			 pup-title="Listen to this"
@@ -126,10 +127,3 @@
 
 	<button type="submit" size="Large">Submit!</button>
 </form>
-
-<!--
-	φως του κοσμου
-	tooltip="Cool <b>beans</b> <u>man</u>!"
-	ttip-as-popover="true"
-	ttip-is-html="true"
-	ttip-placement="Right"-->

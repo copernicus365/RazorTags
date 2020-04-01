@@ -29,12 +29,12 @@ namespace RazorTags.WebDemo.Controllers
 
 			var vm = new PlaygroundVM() {
 				Page = page,
-				Name = "Jesus",
-				Age = 33,
-				Email = "messiah@godreigns.heaven",
+				Name = "John",
+				Age = 30,
+				Email = "john@test.com",
 				Phone = "",
 				PublishedTime = DateTime.Now,
-				Title = "הרוח והכלה אמרים בוא!",
+				Title = "Lorem ipsum κάλος שָׁלוֹם",
 				Color = ColorType.Black
 			};
 
